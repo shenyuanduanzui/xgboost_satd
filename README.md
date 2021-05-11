@@ -8,6 +8,10 @@ fs.py contains the work of feature selection part.
 
 generate_sample.py contains the work of data augmentation.
 
-xgboost.py trains the model used in the paper and get the results.
+xgboost_satd.py trains the model used in the paper and performs the prediction.
  
+# The process to use the code 
 
+a. run data_helper.py to preprocess the data
+b. run generate_sample.py to generate the data of augmentation
+c. run xgboost_satd to train xgboost classifier and predict the results.
