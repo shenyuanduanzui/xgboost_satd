@@ -1,0 +1,9 @@
+
+*.iml
+.idea/vcs.xml
+.idea/deployment.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/misc.xml
+.idea/workspace.xml
+.idea/rSettings.xml
+*.xml
