@@ -20,10 +20,6 @@ def create(df, n, label_name):
     length = len(df)
     for i in range(length, n, 1):
         if i % 2 == 0:
-            s = df.loc[i % length][2]
-            s = rand_text(s)
-            df.loc[i] = ['create', label_name, s]
-        else:
             rand1, rand2 = int(random.random() * length), int(random.random() * length)
             str1 = df.loc[rand1][2]
             str2 = df.loc[rand2][2]
@@ -31,8 +27,17 @@ def create(df, n, label_name):
             str_l2 = str2.split(' ')
             str_l = str_l1[:int(len(str_l1) / 2)]
             str_l.extend(str_l2[int(len(str_l2) / 2):])
-            s = ' '.join(str_l).strip()
-            df.loc[i] = ['create', label_name, s]
+            str_2 = str_l2[:int(len(str_l2) /2)]
+            str_2.extend(str_l1[int(len(str_l1) / 2):])
+            s1 = ' '.join(str_l).strip()
+            s2 = ' '.join(str_2).strip()
+            df.loc[i] = ['create', label_name, s1]
+            df.loc[i] = ['create', label_name, s2]
+            # s = df.loc[i % length][2]
+            # s = rand_text(s)
+            # df.loc[i] = ['create', label_name, s]
+
+
     return df
 
 
